@@ -3,33 +3,33 @@
 
 Console.WriteLine("Enter massive size");
 int size = int.Parse(Console.ReadLine());
-int[] numbers = new int[size];
+int[] array = new int[size];
 
-FillArray(numbers);
+FillArray(array);
 
-PrintArray(numbers);
+PrintArray(array);
 int count = 0;
 
-for (int z = 0; z < numbers.Length; z++)
-if (numbers[z] % 2 == 0)
+for (int z = 0; z < array.Length; z++)
+if (array[z] % 2 == 0)
 count++;
 
 Console.WriteLine($"{count} numbers are even");
 
-void FillArray(int[] numbers)
+void FillArray(int[] array)
 {
-    for(int i = 0; i < numbers.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        numbers[i] = new Random().Next(100,1000);
+        array[i] = new Random().Next(100,1000);
     }
 }
 
-void PrintArray(int[] numbers)
+void PrintArray(int[] array)
 {
     Console.Write("[");
-    for(int i = 0; i < numbers.Length; i++)
+    for(int i = 0; i < array.Length; i++)
     {
-        Console.Write(numbers[i] + " ");
+        Console.Write(array[i] + " ");
     }
     Console.Write("]");
     Console.WriteLine();
